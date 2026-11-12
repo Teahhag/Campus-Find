@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #faf7f0;
+    color: #263c55;
+}
+
+.navbar {
+    background-color: #263c55;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    font-size: 26px;
+}
+
+.navbar h2 span {
+    color: #d9b98c;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.tag {
+    color: #a17c50;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #b58b58;
+}
+
+.sub {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #263c55;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.btn.secondary {
+    background-color: #b58b58;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 35px 10px;
+    background-color: #eae2d5;
+}
+
+.stats h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.items, .report {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.items > p, .report > p {
+    color: #777;
+    margin: 12px 0 30px;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.item-card {
+    background-color: white;
+    padding: 35px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.emoji {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.item-card p {
+    color: #888;
+    margin-top: 10px;
+}
+
+.report form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #263c55;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #263c55;
+    color: white;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar a {
+        margin: 8px;
+    }
+
+    .item-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
