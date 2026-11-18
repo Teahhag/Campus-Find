@@ -63,59 +63,6 @@ footer.footer {
 </head>
 <body>
 
-
-
-<section class="report" id="report">
-    <h2>Report an Item</h2>
-    <p>Help someone find what they've lost.</p>
-    <form method="POST" action="save.php">
-        <input name="item" placeholder="Item name" required>
-        <select name="status" required>
-            <option value="">Select status</option>
-            <option value="Lost">Lost</option>
-            <option value="Found">Found</option>
-        </select>
-        <input name="description" placeholder="Description" required>
-        <input name="contact" placeholder="Contact details" required>
-        <button type="submit">Submit Report →</button>
-    </form>
-</section>
-
-
-<footer class="footer">
-    <div class="footer-content">
-
-        <div class="footer-section">
-            <h3>CampusFind.</h3>
-            <p>A platform that helps students reconnect
-            with their lost belongings.</p>
-        </div>
-
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <a href="#home">Home</a>
-            <a href="#items">Browse Items</a>
-            <a href="#report">Report Item</a>
-        </div>
-
-        <div class="footer-section">
-            <h3>About</h3>
-            <p>Making campus lost and found easier,
-            faster and more accessible.</p>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 CampusFind. Built for a better campus community.
-    </div>
-</footer>
-<script>
-function searchItems() {
-    let input = document.getElementById("searchItem")
-        .value.toLowerCase();
-
-    let cards = document.querySelectorAll(".item-card");
 <nav class="navbar">
     <h2>Campus<span>Find.</span></h2>
     <div>
@@ -182,6 +129,59 @@ style="max-width:550px; margin:10px auto;">
     <p>No items reported yet.</p>
 <?php endif; ?>
 </section>
+
+<section class="report" id="report">
+    <h2>Report an Item</h2>
+    <p>Help someone find what they've lost.</p>
+    <form method="POST" action="save.php">
+        <input name="item" placeholder="Item name" required>
+        <select name="status" required>
+            <option value="">Select status</option>
+            <option value="Lost">Lost</option>
+            <option value="Found">Found</option>
+        </select>
+        <input name="description" placeholder="Description" required>
+        <input name="contact" placeholder="Contact details" required>
+        <button type="submit">Submit Report →</button>
+    </form>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>CampusFind.</h3>
+            <p>A platform that helps students reconnect
+            with their lost belongings.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#items">Browse Items</a>
+            <a href="#report">Report Item</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>About</h3>
+            <p>Making campus lost and found easier,
+            faster and more accessible.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CampusFind. Built for a better campus community.
+    </div>
+</footer>
+<script>
+function searchItems() {
+    let input = document.getElementById("searchItem")
+        .value.toLowerCase();
+
+    let cards = document.querySelectorAll(".item-card");
+
     cards.forEach(function(card) {
         let itemName = card.querySelector("h3")
             .textContent.toLowerCase();
